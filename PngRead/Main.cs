@@ -60,19 +60,22 @@ namespace PngRead
 			
 			byte[] data = new byte[header.Stride*header.Height];
 			
-			// for(int i=0; i<n
+			for(int i=0; i<n; i++)
+			{
+				SetPixel(data,i,i,header.Stride);
+				SetPixel(data,n-i,i,header.Stride);
+			}
 			
 			WritePng(fileName,header,null,data,null);			
 		}
 		
-		public void SetPixel(byte[] data, int x, int y, int stride)
+		public static void SetPixel(byte[] data, int x, int y, int stride)
 		{
 			int rowOfs = y * stride;
 			int colOfs = x / 8;
 			int mask = 1 << (7 - (x % 8));
 			
-			data[rowOfs+colOfs] = (byte)mask;
-			
+			data[rowOfs+colOfs] |= (byte)mask;
 		}
 		
 		public static void xMain (string[] args)

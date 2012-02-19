@@ -70,13 +70,15 @@ namespace PngRead
 			for(int i=0; i<n; i++)
 			{
 				SetPixel(data,i,i,header.Stride);		// desktop
-				SetPixel(data,n-i,i,header.Stride);		// desktop
-				SetPixel(data,n/2,i,header.Stride);		// desktop
+				SetPixel(data,n-i,i,header.Stride);		// netbook
+				SetPixel(data,n/2,i,header.Stride);		// netbook
 				SetPixel(data,i,n/2,header.Stride);		// desktop
 			}
 			
 			WritePng(fileName,header,null,data,null);			
 		}
+		
+		// netbook ohne Konflikt
 		
 		public static void SetPixel(byte[] data, int x, int y, int stride)
 		{

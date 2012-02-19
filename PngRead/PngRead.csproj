@@ -51,4 +51,7 @@
     <Compile Include="PngFilter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="git-info.txt" />
+  </ItemGroup>
 </Project>

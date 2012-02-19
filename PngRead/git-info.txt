@@ -1,0 +1,50 @@
+Some infos about usage of git
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+GIT with Dropbox
+http://tumblr.intranation.com/post/766290743/using-dropbox-git-repository 
+ 
+Globale Einstellungen
+
+	git config --global user.name “<user>”
+	git config --global user.email “<email>” 
+
+Dropbox Repo einrichten
+
+	cd ~/Dropbox
+	mkdir -p repos/pngread.git
+	cd !$
+	git --bare init
+ 
+Lokales Repo aufsetzen
+
+ 	git init 
+ 	git remote add dropbox file://$HOME/Dropbox/repos/pngread.git 		# Verbinden mit Repo auf Dropbox
+ 
+ Files hinzufügen und commiten nach 'master'
+  
+ 	git add /\* 
+ 	git status
+ 	git commit -m "some text"
+ 	git commit -a -m "some text" 			# alle changed und deleted sofort committen
+
+ Änderungen nach Dropbox Pushen 
+ 
+ 	git push dropbox master
+ 	
+ 	
+ 	
+ Neues Abholen in leeres Lokales Repository
+ 	cd ~/Projects
+	git clone -o dropbox file://$HOME/Dropbox/repos/pngread.git
+	
+
+ Pull vom Repo
+ 
+ 	git pill dropbox	
+	
+ Informationen 
+ 
+ 	git remote [show]	 	
+ 	git status 
+ 	git show HEAD

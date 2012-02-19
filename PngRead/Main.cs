@@ -3,59 +3,6 @@ using System.IO;
 using System.Text;
 using System.Collections.Generic;
 
-/*
- * 
- 
-http://tumblr.intranation.com/post/766290743/using-dropbox-git-repository 
- 
- 
-Globale Einstellungen
-
-	git config --global user.name “<user>”
-	git config --global user.email “<email>” 
-
-Dropbox Repo einrichten
-
-	cd ~/Dropbox
-	mkdir -p repos/pngread.git
-	cd !$
-	git --bare init
- 
-Lokales Repo aufsetzen
-
- 	git init 
- 	git remote add dropbox file://$HOME/Dropbox/repos/pngread.git 		# Verbinden mit Repo auf Dropbox
- 
- Files hinzufügen und commiten nach 'master'
-  
- 	git add /\* 
- 	git status
- 	git commit -m "some text"
- 	git commit -a -m "some text" 			# alle changed und deleted sofort committen
-
- Änderungen nach Dropbox Pushen 
- 
- 	git push dropbox master
- 	
- 	
- 	
- Neues Abholen in leeres Lokales Repository
- 	cd ~/Projects
-	git clone -o dropbox file://$HOME/Dropbox/repos/pngread.git
-	
-
- Pull vom Repo
- 
- 	git pill dropbox	
-	
- Informationen 
- 
- 	git remote [show]	 	
- 	git status 
- 	git show HEAD
-  
-*/
-
 namespace PngRead
 {
 	class MainClass
@@ -63,8 +10,6 @@ namespace PngRead
 		
 		static string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 			
-		// desktop ohne konflikt
-		
 		public static void Main(string[] args)
 		{
 			string fileName = Path.Combine(desktop,"test.png");
@@ -76,16 +21,14 @@ namespace PngRead
 			
 			for(int i=0; i<n; i++)
 			{
-				SetPixel(data,i,i,header.Stride);		// desktop
-				SetPixel(data,n-i,i,header.Stride);		// netbook
-				SetPixel(data,n/2,i,header.Stride);		// netbook
-				SetPixel(data,i,n/2,header.Stride);		// desktop
+				SetPixel(data,i,i,header.Stride);
+				SetPixel(data,n-i,i,header.Stride);
+				SetPixel(data,n/2,i,header.Stride);
+				SetPixel(data,i,n/2,header.Stride);
 			}
 			
 			WritePng(fileName,header,null,data,null);			
 		}
-		
-		// netbook ohne Konflikt
 		
 		public static void SetPixel(byte[] data, int x, int y, int stride)
 		{

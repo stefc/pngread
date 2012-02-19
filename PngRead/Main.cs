@@ -56,6 +56,7 @@ namespace PngRead
 		
 		static string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 			
+		// desktop ohne konflikt
 		
 		public static void Main(string[] args)
 		{
@@ -68,10 +69,10 @@ namespace PngRead
 			
 			for(int i=0; i<n; i++)
 			{
-				SetPixel(data,i,i,header.Stride);
-				SetPixel(data,n-i,i,header.Stride);
-				SetPixel(data,n/2,i,header.Stride);
-				SetPixel(data,i,n/2,header.Stride);
+				SetPixel(data,i,i,header.Stride);		// desktop
+				SetPixel(data,n-i,i,header.Stride);		// desktop
+				SetPixel(data,n/2,i,header.Stride);		// desktop
+				SetPixel(data,i,n/2,header.Stride);		// desktop
 			}
 			
 			WritePng(fileName,header,null,data,null);			

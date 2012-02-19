@@ -5,7 +5,10 @@ using System.Collections.Generic;
 
 /*
  * 
-
+ 
+http://tumblr.intranation.com/post/766290743/using-dropbox-git-repository 
+ 
+ 
 Globale Einstellungen
 
 	git config --global user.name “<user>”
@@ -45,7 +48,11 @@ Lokales Repo aufsetzen
  
  	git pill dropbox	
 	
-	 	
+ Informationen 
+ 
+ 	git remote [show]	 	
+ 	git status 
+ 	git show HEAD
   
 */
 

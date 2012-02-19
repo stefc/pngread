@@ -25,9 +25,10 @@ Lokales Repo aufsetzen
  
  Files hinzufügen und commiten nach 'master'
   
- 	git add -n /\* 
+ 	git add /\* 
  	git status
  	git commit -m "some text"
+ 	git commit -a -m "some text" 			# alle changed und deleted sofort committen
 
  Änderungen nach Dropbox Pushen 
  
@@ -35,9 +36,14 @@ Lokales Repo aufsetzen
  	
  	
  	
- Neues Abholen 
+ Neues Abholen in leeres Lokales Repository
  	cd ~/Projects
 	git clone -o dropbox file://$HOME/Dropbox/repos/pngread.git
+	
+
+ Pull vom Repo
+ 
+ 	git pill dropbox	
 	
 	 	
   

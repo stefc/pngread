@@ -4,11 +4,44 @@ using System.Text;
 using System.Collections.Generic;
 
 /*
- * git add -n /\* 
- * git status
  * 
- * 
- * */
+
+Globale Einstellungen
+
+	git config --global user.name “<user>”
+	git config --global user.email “<email>” 
+
+Dropbox Repo einrichten
+
+	cd ~/Dropbox
+	mkdir -p repos/pngread.git
+	cd !$
+	git --bare init
+ 
+Lokales Repo aufsetzen
+
+ 	git init 
+ 	git remote add dropbox file://$HOME/Dropbox/repos/pngread.git 		# Verbinden mit Repo auf Dropbox
+ 
+ Files hinzufügen und commiten nach 'master'
+  
+ 	git add -n /\* 
+ 	git status
+ 	git commit -m "some text"
+
+ Änderungen nach Dropbox Pushen 
+ 
+ 	git push dropbox master
+ 	
+ 	
+ 	
+ Neues Abholen 
+ 	cd ~/Projects
+	git clone -o dropbox file://$HOME/Dropbox/repos/pngread.git
+	
+	 	
+  
+*/
 
 namespace PngRead
 {

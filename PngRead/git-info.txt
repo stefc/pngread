@@ -29,7 +29,6 @@ Lokales Repo aufsetzen
  	git commit -a -m "some text" 			# alle changed und deleted sofort committen
 
  Änderungen nach Dropbox Pushen 
- 
  	git push dropbox master
  	
  	

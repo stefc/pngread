@@ -70,6 +70,8 @@ namespace PngRead
 			{
 				SetPixel(data,i,i,header.Stride);
 				SetPixel(data,n-i,i,header.Stride);
+				SetPixel(data,n/2,i,header.Stride);
+				SetPixel(data,i,n/2,header.Stride);
 			}
 			
 			WritePng(fileName,header,null,data,null);			

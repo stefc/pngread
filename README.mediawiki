@@ -1,0 +1,13 @@
+== Managed C# PNG-Format Library == 
+
+This source is sample code I write to read & write PNG Files without using the 'libpng' library.
+
+It helps me a lot of studying the format and the usage of git with remote repositories.
+
+It's works well with the following formats 
+
+* 24-Bit RGB
+* 8-Bit Grayscale
+* 1-Bit Monochrome
+
+mfg Stefc

@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace PngRead
+namespace stefc.pnglib
 {	
 	public class PngBinaryReader : BinaryReader
 	{

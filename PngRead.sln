@@ -1,12 +1,14 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PngRead", "PngRead\PngRead.csproj", "{744512E0-E18A-42C2-94A5-867D66DDA0DC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{E02F039A-E725-45E2-8BC7-7FD7A582404B}"
 	ProjectSection(SolutionItems) = preProject
 		PngRead\Lib\ICSharpCode.SharpZipLib.dll = PngRead\Lib\ICSharpCode.SharpZipLib.dll
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{9A60B53C-E581-4302-84A0-3D7E02050873}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,10 +20,14 @@ Global
 		{744512E0-E18A-42C2-94A5-867D66DDA0DC}.Debug|x86.Build.0 = Debug|x86
 		{744512E0-E18A-42C2-94A5-867D66DDA0DC}.Release|x86.ActiveCfg = Release|x86
 		{744512E0-E18A-42C2-94A5-867D66DDA0DC}.Release|x86.Build.0 = Release|x86
+		{9A60B53C-E581-4302-84A0-3D7E02050873}.Debug|x86.ActiveCfg = Debug|x86
+		{9A60B53C-E581-4302-84A0-3D7E02050873}.Debug|x86.Build.0 = Debug|x86
+		{9A60B53C-E581-4302-84A0-3D7E02050873}.Release|x86.ActiveCfg = Release|x86
+		{9A60B53C-E581-4302-84A0-3D7E02050873}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = PngRead\PngRead.csproj
+		StartupItem = Tests\Tests.csproj
 	EndGlobalSection
 EndGlobal

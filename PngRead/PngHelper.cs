@@ -7,7 +7,7 @@ using System.Text;
 using ICSharpCode.SharpZipLib.Zip.Compression.Streams;
 using ICSharpCode.SharpZipLib.Zip.Compression;
 
-namespace PngRead
+namespace stefc.pnglib
 {
 	public static class PngHelper
 	{

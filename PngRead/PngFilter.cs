@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace PngRead
+namespace stefc.pnglib
 {
 	internal class PngFilter
 	{

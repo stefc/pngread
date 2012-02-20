@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace PngRead
+namespace stefc.pnglib
 {
 	public static class Png
 	{

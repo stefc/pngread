@@ -1,6 +1,6 @@
 using System;
 
-namespace PngRead
+namespace stefc.pnglib
 {
 	public class Chunk 
 	{
